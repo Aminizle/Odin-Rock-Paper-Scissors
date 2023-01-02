@@ -6,13 +6,13 @@ html, body
 }
  
 body {
-    background-image: linear-gradient(to bottom, #30cfd0 0%, #330867 100%);
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
     background-repeat: no-repeat;
    
 }
 
 .results-container {
-background-color: #48ff00;
+/* background-color: #48ff00; */
 margin: 10%;
 display: flex;
 justify-content: space-around;
@@ -21,7 +21,7 @@ align-items: center;
 }
 
 .button-container {
-    background-color: #002bff;
+    /* background-color: #002bff; */
     margin: 10%;
     display: flex;
     justify-content: space-around;
