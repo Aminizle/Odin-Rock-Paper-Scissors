@@ -5,6 +5,10 @@ const resultDisplay = document.getElementById('result');
 const rockButton = document.querySelector('.rock');
 const paperButton = document.querySelector('.paper');
 const scissorsButton = document.querySelector('.scissors');
+const computerScoreCountDisplay = document.getElementById('computer-score');
+const playerScoreCountDisplay = document.getElementById('player-score');
+const drawCountDisplay = document.getElementById('draw-count');
+
 
 //Click Event Listeners
 rockButton.addEventListener('click', () => {
@@ -78,26 +82,26 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    for (let i = 0; i < 5; i++) {
-
-        console.log("Player chose: " + playerSelection);
+    for (let i = 0; i < 6; i++) {
         let computerSelection = getComputerChoice();
-        console.log("Computer chose: " + computerSelection);
+        playRound("rock", computerSelection);
 
-        playRound(playerSelection, computerSelection);
+        computerScoreCountDisplay.innerText = computerScore;
+        playerScoreCountDisplay.innerText = playerScore;
+        drawCountDisplay.innerText = drawScore;
 
         if (roundResult == "playerWins") {
             playerScore++;
-            console.log("Player score: " + playerScore);
+            // console.log("Player score: " + playerScore);
 
 
         } else if (roundResult === "computerWins") {
             computerScore++;
-            console.log("Computer score: " + computerScore);
+            // console.log("Computer score: " + computerScore);
 
         } else if (roundResult === "drawCounter") {
             drawScore++;
-            console.log("Player score: " + drawScore);
+            // console.log("Player score: " + drawScore);
         }
 
 
@@ -112,5 +116,6 @@ function game() {
 
 }
 
+game()
 
 
